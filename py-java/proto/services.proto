@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package pb;
+
+service GrpcServices {
+    rpc ExampleCaller (ExampleRequest) returns (ExampleResponse);
+}
+
+message ExampleRequest {
+    string message = 1;
+}
+
+message ExampleResponse {
+    string res = 1;
+}
