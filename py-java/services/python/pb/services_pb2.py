@@ -13,13 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0eservices.proto\x12\x02pb\"!\n\x0e\x45xampleRequest\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x1e\n\x0f\x45xampleResponse\x12\x0b\n\x03res\x18\x01 \x01(\t2E\n\x0f\x45xampleServices\x12\x32\n\x07\x45xample\x12\x12.pb.ExampleRequest\x1a\x13.pb.ExampleResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0eservices.proto\x12\x02pb\"!\n\x0e\x45xampleRequest\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x1e\n\x0f\x45xampleResponse\x12\x0b\n\x03res\x18\x01 \x01(\t2E\n\x0f\x45xampleServices\x12\x32\n\x07\x45xample\x12\x12.pb.ExampleRequest\x1a\x13.pb.ExampleResponseB\x10\n\x0e\x63om.example.pbb\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'services_pb2', globals())
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
+  DESCRIPTOR._serialized_options = b'\n\016com.example.pb'
   _EXAMPLEREQUEST._serialized_start=22
   _EXAMPLEREQUEST._serialized_end=55
   _EXAMPLERESPONSE._serialized_start=57

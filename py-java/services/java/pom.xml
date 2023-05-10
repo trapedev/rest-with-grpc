@@ -25,6 +25,21 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+    <groupId>io.grpc</groupId>
+    <artifactId>grpc-netty-shaded</artifactId>
+    <version>1.53.0</version> <!-- このバージョンはgRPCの最新バージョンに置き換えてください -->
+  </dependency>
+  <dependency>
+    <groupId>io.grpc</groupId>
+    <artifactId>grpc-protobuf</artifactId>
+    <version>1.53.0</version> <!-- このバージョンはgRPCの最新バージョンに置き換えてください -->
+  </dependency>
+  <dependency>
+    <groupId>io.grpc</groupId>
+    <artifactId>grpc-stub</artifactId>
+    <version>1.53.0</version> <!-- このバージョンはgRPCの最新バージョンに置き換えてください -->
+  </dependency>
   </dependencies>
 
   <build>

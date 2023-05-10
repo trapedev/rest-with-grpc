@@ -17,3 +17,7 @@ cd grpc-java/compiler
 
 ../gradlew java_pluginExecutable -PskipAndroid=true
 ```
+
+## Reference 
+
+- [gRPCのJava版のアプリケーションを手動またはmakeでビルドする方法](https://mikio.hatenablog.com/entry/2021/10/23/160940)

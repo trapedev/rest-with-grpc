@@ -1,4 +1,4 @@
-package pb;
+package com.example.pb;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
@@ -17,7 +17,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
-@javax.annotation.Generated(
+@javax.annotation.processing.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: services.proto")
 public final class ExampleServicesGrpc {
@@ -27,29 +27,29 @@ public final class ExampleServicesGrpc {
   public static final String SERVICE_NAME = "pb.ExampleServices";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<pb.Services.ExampleRequest,
-      pb.Services.ExampleResponse> getExampleMethod;
+  private static volatile io.grpc.MethodDescriptor<com.example.pb.Services.ExampleRequest,
+      com.example.pb.Services.ExampleResponse> getExampleMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Example",
-      requestType = pb.Services.ExampleRequest.class,
-      responseType = pb.Services.ExampleResponse.class,
+      requestType = com.example.pb.Services.ExampleRequest.class,
+      responseType = com.example.pb.Services.ExampleResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<pb.Services.ExampleRequest,
-      pb.Services.ExampleResponse> getExampleMethod() {
-    io.grpc.MethodDescriptor<pb.Services.ExampleRequest, pb.Services.ExampleResponse> getExampleMethod;
+  public static io.grpc.MethodDescriptor<com.example.pb.Services.ExampleRequest,
+      com.example.pb.Services.ExampleResponse> getExampleMethod() {
+    io.grpc.MethodDescriptor<com.example.pb.Services.ExampleRequest, com.example.pb.Services.ExampleResponse> getExampleMethod;
     if ((getExampleMethod = ExampleServicesGrpc.getExampleMethod) == null) {
       synchronized (ExampleServicesGrpc.class) {
         if ((getExampleMethod = ExampleServicesGrpc.getExampleMethod) == null) {
           ExampleServicesGrpc.getExampleMethod = getExampleMethod =
-              io.grpc.MethodDescriptor.<pb.Services.ExampleRequest, pb.Services.ExampleResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.example.pb.Services.ExampleRequest, com.example.pb.Services.ExampleResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Example"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  pb.Services.ExampleRequest.getDefaultInstance()))
+                  com.example.pb.Services.ExampleRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  pb.Services.ExampleResponse.getDefaultInstance()))
+                  com.example.pb.Services.ExampleResponse.getDefaultInstance()))
               .setSchemaDescriptor(new ExampleServicesMethodDescriptorSupplier("Example"))
               .build();
         }
@@ -108,8 +108,8 @@ public final class ExampleServicesGrpc {
 
     /**
      */
-    public void example(pb.Services.ExampleRequest request,
-        io.grpc.stub.StreamObserver<pb.Services.ExampleResponse> responseObserver) {
+    public void example(com.example.pb.Services.ExampleRequest request,
+        io.grpc.stub.StreamObserver<com.example.pb.Services.ExampleResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getExampleMethod(), responseObserver);
     }
 
@@ -119,8 +119,8 @@ public final class ExampleServicesGrpc {
             getExampleMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                pb.Services.ExampleRequest,
-                pb.Services.ExampleResponse>(
+                com.example.pb.Services.ExampleRequest,
+                com.example.pb.Services.ExampleResponse>(
                   this, METHODID_EXAMPLE)))
           .build();
     }
@@ -142,8 +142,8 @@ public final class ExampleServicesGrpc {
 
     /**
      */
-    public void example(pb.Services.ExampleRequest request,
-        io.grpc.stub.StreamObserver<pb.Services.ExampleResponse> responseObserver) {
+    public void example(com.example.pb.Services.ExampleRequest request,
+        io.grpc.stub.StreamObserver<com.example.pb.Services.ExampleResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getExampleMethod(), getCallOptions()), request, responseObserver);
     }
@@ -165,7 +165,7 @@ public final class ExampleServicesGrpc {
 
     /**
      */
-    public pb.Services.ExampleResponse example(pb.Services.ExampleRequest request) {
+    public com.example.pb.Services.ExampleResponse example(com.example.pb.Services.ExampleRequest request) {
       return blockingUnaryCall(
           getChannel(), getExampleMethod(), getCallOptions(), request);
     }
@@ -187,8 +187,8 @@ public final class ExampleServicesGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<pb.Services.ExampleResponse> example(
-        pb.Services.ExampleRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.example.pb.Services.ExampleResponse> example(
+        com.example.pb.Services.ExampleRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getExampleMethod(), getCallOptions()), request);
     }
@@ -214,8 +214,8 @@ public final class ExampleServicesGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_EXAMPLE:
-          serviceImpl.example((pb.Services.ExampleRequest) request,
-              (io.grpc.stub.StreamObserver<pb.Services.ExampleResponse>) responseObserver);
+          serviceImpl.example((com.example.pb.Services.ExampleRequest) request,
+              (io.grpc.stub.StreamObserver<com.example.pb.Services.ExampleResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -239,7 +239,7 @@ public final class ExampleServicesGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return pb.Services.getDescriptor();
+      return com.example.pb.Services.getDescriptor();
     }
 
     @java.lang.Override

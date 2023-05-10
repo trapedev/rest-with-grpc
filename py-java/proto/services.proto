@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package pb;
 
+option java_package = "com.example.pb";
+
 service ExampleServices {
     rpc Example (ExampleRequest) returns (ExampleResponse);
 }

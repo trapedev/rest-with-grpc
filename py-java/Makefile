@@ -11,10 +11,12 @@ history:
 	&& git push origin HEAD
 
 .PHONY: proto
-proto:
+proto:	## protoファイルからprotobufを自動生成
 	rm -rf services/python/pb/*.py \
 	&& python3 -m grpc_tools.protoc -I=proto --python_out=services/python/pb --grpc_python_out=services/python/pb services.proto \
 	&& rm -rf services/java/src/main/java/com/example/pb/*.java \
-	&& protoc --plugin=protoc-gen-grpc_java=/usr/bin/grpc_java_plugin --proto_path=proto --java_out=./services/java/src/main/java/com/example --grpc_java_out=./services/java/src/main/java/com/example proto/services.proto \
-	&& cd services/java/src/main/java/example/pb \
-	&& sed -e 's/javax\.annotation\.Generated/javax.annotation.processing.Generated/g' ExampleServicesGrpc.java > ~ExampleServicesGrpc.java
+	&& protoc --plugin=protoc-gen-grpc_java=/usr/bin/grpc_java_plugin --proto_path=proto --java_out=./services/java/src/main/java --grpc_java_out=./services/java/src/main/java proto/services.proto \
+	&& cd services/java/src/main/java/com/example/pb \
+	&& sed -e 's/javax.annotation.Generated/javax.annotation.processing.Generated/g' ExampleServicesGrpc.java > ~ExampleServicesGrpc.java \
+	&& rm -rf ExampleServicesGrpc.java \
+	&& mv ~ExampleServicesGrpc.java ExampleServicesGrpc.java
