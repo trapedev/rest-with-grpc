@@ -2,8 +2,8 @@ syntax = "proto3";
 
 package pb;
 
-service GrpcServices {
-    rpc ExampleCaller (ExampleRequest) returns (ExampleResponse);
+service ExampleServices {
+    rpc Example (ExampleRequest) returns (ExampleResponse);
 }
 
 message ExampleRequest {

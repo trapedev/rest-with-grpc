@@ -20,191 +20,191 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: services.proto")
-public final class GrpcServicesGrpc {
+public final class ExampleServicesGrpc {
 
-  private GrpcServicesGrpc() {}
+  private ExampleServicesGrpc() {}
 
-  public static final String SERVICE_NAME = "pb.GrpcServices";
+  public static final String SERVICE_NAME = "pb.ExampleServices";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<pb.Services.ExampleRequest,
-      pb.Services.ExampleResponse> getExampleCallerMethod;
+      pb.Services.ExampleResponse> getExampleMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ExampleCaller",
+      fullMethodName = SERVICE_NAME + '/' + "Example",
       requestType = pb.Services.ExampleRequest.class,
       responseType = pb.Services.ExampleResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<pb.Services.ExampleRequest,
-      pb.Services.ExampleResponse> getExampleCallerMethod() {
-    io.grpc.MethodDescriptor<pb.Services.ExampleRequest, pb.Services.ExampleResponse> getExampleCallerMethod;
-    if ((getExampleCallerMethod = GrpcServicesGrpc.getExampleCallerMethod) == null) {
-      synchronized (GrpcServicesGrpc.class) {
-        if ((getExampleCallerMethod = GrpcServicesGrpc.getExampleCallerMethod) == null) {
-          GrpcServicesGrpc.getExampleCallerMethod = getExampleCallerMethod =
+      pb.Services.ExampleResponse> getExampleMethod() {
+    io.grpc.MethodDescriptor<pb.Services.ExampleRequest, pb.Services.ExampleResponse> getExampleMethod;
+    if ((getExampleMethod = ExampleServicesGrpc.getExampleMethod) == null) {
+      synchronized (ExampleServicesGrpc.class) {
+        if ((getExampleMethod = ExampleServicesGrpc.getExampleMethod) == null) {
+          ExampleServicesGrpc.getExampleMethod = getExampleMethod =
               io.grpc.MethodDescriptor.<pb.Services.ExampleRequest, pb.Services.ExampleResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ExampleCaller"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Example"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   pb.Services.ExampleRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   pb.Services.ExampleResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new GrpcServicesMethodDescriptorSupplier("ExampleCaller"))
+              .setSchemaDescriptor(new ExampleServicesMethodDescriptorSupplier("Example"))
               .build();
         }
       }
     }
-    return getExampleCallerMethod;
+    return getExampleMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
-  public static GrpcServicesStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<GrpcServicesStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<GrpcServicesStub>() {
+  public static ExampleServicesStub newStub(io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ExampleServicesStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ExampleServicesStub>() {
         @java.lang.Override
-        public GrpcServicesStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new GrpcServicesStub(channel, callOptions);
+        public ExampleServicesStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ExampleServicesStub(channel, callOptions);
         }
       };
-    return GrpcServicesStub.newStub(factory, channel);
+    return ExampleServicesStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static GrpcServicesBlockingStub newBlockingStub(
+  public static ExampleServicesBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<GrpcServicesBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<GrpcServicesBlockingStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<ExampleServicesBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ExampleServicesBlockingStub>() {
         @java.lang.Override
-        public GrpcServicesBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new GrpcServicesBlockingStub(channel, callOptions);
+        public ExampleServicesBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ExampleServicesBlockingStub(channel, callOptions);
         }
       };
-    return GrpcServicesBlockingStub.newStub(factory, channel);
+    return ExampleServicesBlockingStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
-  public static GrpcServicesFutureStub newFutureStub(
+  public static ExampleServicesFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<GrpcServicesFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<GrpcServicesFutureStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<ExampleServicesFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ExampleServicesFutureStub>() {
         @java.lang.Override
-        public GrpcServicesFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new GrpcServicesFutureStub(channel, callOptions);
+        public ExampleServicesFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ExampleServicesFutureStub(channel, callOptions);
         }
       };
-    return GrpcServicesFutureStub.newStub(factory, channel);
+    return ExampleServicesFutureStub.newStub(factory, channel);
   }
 
   /**
    */
-  public static abstract class GrpcServicesImplBase implements io.grpc.BindableService {
+  public static abstract class ExampleServicesImplBase implements io.grpc.BindableService {
 
     /**
      */
-    public void exampleCaller(pb.Services.ExampleRequest request,
+    public void example(pb.Services.ExampleRequest request,
         io.grpc.stub.StreamObserver<pb.Services.ExampleResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getExampleCallerMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getExampleMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getExampleCallerMethod(),
+            getExampleMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 pb.Services.ExampleRequest,
                 pb.Services.ExampleResponse>(
-                  this, METHODID_EXAMPLE_CALLER)))
+                  this, METHODID_EXAMPLE)))
           .build();
     }
   }
 
   /**
    */
-  public static final class GrpcServicesStub extends io.grpc.stub.AbstractAsyncStub<GrpcServicesStub> {
-    private GrpcServicesStub(
+  public static final class ExampleServicesStub extends io.grpc.stub.AbstractAsyncStub<ExampleServicesStub> {
+    private ExampleServicesStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GrpcServicesStub build(
+    protected ExampleServicesStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new GrpcServicesStub(channel, callOptions);
+      return new ExampleServicesStub(channel, callOptions);
     }
 
     /**
      */
-    public void exampleCaller(pb.Services.ExampleRequest request,
+    public void example(pb.Services.ExampleRequest request,
         io.grpc.stub.StreamObserver<pb.Services.ExampleResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getExampleCallerMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getExampleMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class GrpcServicesBlockingStub extends io.grpc.stub.AbstractBlockingStub<GrpcServicesBlockingStub> {
-    private GrpcServicesBlockingStub(
+  public static final class ExampleServicesBlockingStub extends io.grpc.stub.AbstractBlockingStub<ExampleServicesBlockingStub> {
+    private ExampleServicesBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GrpcServicesBlockingStub build(
+    protected ExampleServicesBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new GrpcServicesBlockingStub(channel, callOptions);
+      return new ExampleServicesBlockingStub(channel, callOptions);
     }
 
     /**
      */
-    public pb.Services.ExampleResponse exampleCaller(pb.Services.ExampleRequest request) {
+    public pb.Services.ExampleResponse example(pb.Services.ExampleRequest request) {
       return blockingUnaryCall(
-          getChannel(), getExampleCallerMethod(), getCallOptions(), request);
+          getChannel(), getExampleMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class GrpcServicesFutureStub extends io.grpc.stub.AbstractFutureStub<GrpcServicesFutureStub> {
-    private GrpcServicesFutureStub(
+  public static final class ExampleServicesFutureStub extends io.grpc.stub.AbstractFutureStub<ExampleServicesFutureStub> {
+    private ExampleServicesFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GrpcServicesFutureStub build(
+    protected ExampleServicesFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new GrpcServicesFutureStub(channel, callOptions);
+      return new ExampleServicesFutureStub(channel, callOptions);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<pb.Services.ExampleResponse> exampleCaller(
+    public com.google.common.util.concurrent.ListenableFuture<pb.Services.ExampleResponse> example(
         pb.Services.ExampleRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getExampleCallerMethod(), getCallOptions()), request);
+          getChannel().newCall(getExampleMethod(), getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_EXAMPLE_CALLER = 0;
+  private static final int METHODID_EXAMPLE = 0;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final GrpcServicesImplBase serviceImpl;
+    private final ExampleServicesImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(GrpcServicesImplBase serviceImpl, int methodId) {
+    MethodHandlers(ExampleServicesImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -213,8 +213,8 @@ public final class GrpcServicesGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_EXAMPLE_CALLER:
-          serviceImpl.exampleCaller((pb.Services.ExampleRequest) request,
+        case METHODID_EXAMPLE:
+          serviceImpl.example((pb.Services.ExampleRequest) request,
               (io.grpc.stub.StreamObserver<pb.Services.ExampleResponse>) responseObserver);
           break;
         default:
@@ -233,9 +233,9 @@ public final class GrpcServicesGrpc {
     }
   }
 
-  private static abstract class GrpcServicesBaseDescriptorSupplier
+  private static abstract class ExampleServicesBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    GrpcServicesBaseDescriptorSupplier() {}
+    ExampleServicesBaseDescriptorSupplier() {}
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
@@ -244,21 +244,21 @@ public final class GrpcServicesGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("GrpcServices");
+      return getFileDescriptor().findServiceByName("ExampleServices");
     }
   }
 
-  private static final class GrpcServicesFileDescriptorSupplier
-      extends GrpcServicesBaseDescriptorSupplier {
-    GrpcServicesFileDescriptorSupplier() {}
+  private static final class ExampleServicesFileDescriptorSupplier
+      extends ExampleServicesBaseDescriptorSupplier {
+    ExampleServicesFileDescriptorSupplier() {}
   }
 
-  private static final class GrpcServicesMethodDescriptorSupplier
-      extends GrpcServicesBaseDescriptorSupplier
+  private static final class ExampleServicesMethodDescriptorSupplier
+      extends ExampleServicesBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final String methodName;
 
-    GrpcServicesMethodDescriptorSupplier(String methodName) {
+    ExampleServicesMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 
@@ -273,12 +273,12 @@ public final class GrpcServicesGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
-      synchronized (GrpcServicesGrpc.class) {
+      synchronized (ExampleServicesGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new GrpcServicesFileDescriptorSupplier())
-              .addMethod(getExampleCallerMethod())
+              .setSchemaDescriptor(new ExampleServicesFileDescriptorSupplier())
+              .addMethod(getExampleMethod())
               .build();
         }
       }

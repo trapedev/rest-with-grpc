@@ -13,7 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0eservices.proto\x12\x02pb\"!\n\x0e\x45xampleRequest\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x1e\n\x0f\x45xampleResponse\x12\x0b\n\x03res\x18\x01 \x01(\t2H\n\x0cGrpcServices\x12\x38\n\rExampleCaller\x12\x12.pb.ExampleRequest\x1a\x13.pb.ExampleResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0eservices.proto\x12\x02pb\"!\n\x0e\x45xampleRequest\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x1e\n\x0f\x45xampleResponse\x12\x0b\n\x03res\x18\x01 \x01(\t2E\n\x0f\x45xampleServices\x12\x32\n\x07\x45xample\x12\x12.pb.ExampleRequest\x1a\x13.pb.ExampleResponseb\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'services_pb2', globals())
@@ -24,6 +24,6 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _EXAMPLEREQUEST._serialized_end=55
   _EXAMPLERESPONSE._serialized_start=57
   _EXAMPLERESPONSE._serialized_end=87
-  _GRPCSERVICES._serialized_start=89
-  _GRPCSERVICES._serialized_end=161
+  _EXAMPLESERVICES._serialized_start=89
+  _EXAMPLESERVICES._serialized_end=158
 # @@protoc_insertion_point(module_scope)

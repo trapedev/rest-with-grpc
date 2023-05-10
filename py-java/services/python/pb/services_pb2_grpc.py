@@ -5,7 +5,7 @@ import grpc
 import services_pb2 as services__pb2
 
 
-class GrpcServicesStub(object):
+class ExampleServicesStub(object):
     """Missing associated documentation comment in .proto file."""
 
     def __init__(self, channel):
@@ -14,42 +14,42 @@ class GrpcServicesStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.ExampleCaller = channel.unary_unary(
-                '/pb.GrpcServices/ExampleCaller',
+        self.Example = channel.unary_unary(
+                '/pb.ExampleServices/Example',
                 request_serializer=services__pb2.ExampleRequest.SerializeToString,
                 response_deserializer=services__pb2.ExampleResponse.FromString,
                 )
 
 
-class GrpcServicesServicer(object):
+class ExampleServicesServicer(object):
     """Missing associated documentation comment in .proto file."""
 
-    def ExampleCaller(self, request, context):
+    def Example(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
 
-def add_GrpcServicesServicer_to_server(servicer, server):
+def add_ExampleServicesServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'ExampleCaller': grpc.unary_unary_rpc_method_handler(
-                    servicer.ExampleCaller,
+            'Example': grpc.unary_unary_rpc_method_handler(
+                    servicer.Example,
                     request_deserializer=services__pb2.ExampleRequest.FromString,
                     response_serializer=services__pb2.ExampleResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'pb.GrpcServices', rpc_method_handlers)
+            'pb.ExampleServices', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
  # This class is part of an EXPERIMENTAL API.
-class GrpcServices(object):
+class ExampleServices(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def ExampleCaller(request,
+    def Example(request,
             target,
             options=(),
             channel_credentials=None,
@@ -59,7 +59,7 @@ class GrpcServices(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/pb.GrpcServices/ExampleCaller',
+        return grpc.experimental.unary_unary(request, target, '/pb.ExampleServices/Example',
             services__pb2.ExampleRequest.SerializeToString,
             services__pb2.ExampleResponse.FromString,
             options, channel_credentials,

@@ -1171,9 +1171,9 @@ public final class Services {
     java.lang.String[] descriptorData = {
       "\n\016services.proto\022\002pb\"!\n\016ExampleRequest\022\017" +
       "\n\007message\030\001 \001(\t\"\036\n\017ExampleResponse\022\013\n\003re" +
-      "s\030\001 \001(\t2H\n\014GrpcServices\0228\n\rExampleCaller" +
-      "\022\022.pb.ExampleRequest\032\023.pb.ExampleRespons" +
-      "eb\006proto3"
+      "s\030\001 \001(\t2E\n\017ExampleServices\0222\n\007Example\022\022." +
+      "pb.ExampleRequest\032\023.pb.ExampleResponseb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
