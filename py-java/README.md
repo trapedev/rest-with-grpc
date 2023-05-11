@@ -1,3 +1,8 @@
+## About
+
+gRPC Client : Python FLask Server
+gRPC Server : Java
+
 ## Set Up
 
 ```bash
