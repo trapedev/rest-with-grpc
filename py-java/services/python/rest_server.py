@@ -6,7 +6,7 @@ import pb.services_pb2_grpc as services_pb2_grpc
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
+def example_grpc_client():
     channel = grpc.insecure_channel('localhost:50051')
     stub = services_pb2_grpc.ExampleServicesStub(channel=channel)
     request = services_pb2.ExampleRequest(message="Hello Server!")
